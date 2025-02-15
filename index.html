@@ -32,8 +32,8 @@
       padding: 10px;
     }
 
-    nav a {
-      /* Descendant combinator */
+    nav>a {
+      /* Child combinator */
       color: white;
       text-decoration: none;
       padding: 10px 15px;
@@ -41,7 +41,7 @@
       font-weight: bold;
     }
 
-    nav a:hover {
+    nav>a:hover {
       background: white;
       color: #2196F3;
       border-radius: 5px;
@@ -63,13 +63,53 @@
       padding: 20px;
     }
 
-    header h1 {
-      /* Descendant combinator */
+    header>h1 {
+      /* Child combinator */
       font-size: 48px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
-    /* Main Content */
+    /* Table Styling */
+    table tbody>tr {
+      /* Child combinator */
+      border: 1px solid #ddd;
+    }
+
+    table th+td {
+      /* Adjacent sibling combinator */
+      font-weight: bold;
+    }
+
+    table tbody tr:hover~tr {
+      /* General sibling combinator */
+      background-color: #e1f5e1;
+    }
+
+    /* Destination Cards */
+    .card+.card {
+      /* Adjacent sibling combinator */
+      margin-left: 10px;
+    }
+
+    .card h3~p {
+      /* General sibling combinator */
+      font-style: italic;
+    }
+
+    /* List Styling */
+    section ul>li {
+      /* Child combinator */
+      margin-bottom: 10px;
+      padding-left: 10px;
+      list-style: none;
+      position: relative;
+    }
+
+    section ol>li+li {
+      /* Adjacent sibling combinator */
+      color: #ff5722;
+    }
+
     main {
       padding: 20px;
     }
@@ -87,7 +127,6 @@
       border-bottom: 2px solid #2196F3;
     }
 
-    /* Table Styling */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -218,6 +257,7 @@
   <header>
     <h1>Explore Beautiful Destinations</h1>
   </header>
+
 
   <main>
     <section>
