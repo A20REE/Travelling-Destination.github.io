@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Destinations</title>
+  <style>
+    /* Reset and Global Styles */
+    body,
+    h1,
+    p,
+    table,
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #2196F3;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #2196F3;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    header {
+      position: relative;
+      height: 500px;
+      background-image: url('https://media.cntraveler.com/photos/6090755e0a033bd816c44937/16:9/w_5616,h_3159,c_limit/Zurich_GettyImages-451614321.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Main Content */
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2196F3;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #2196F3;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e1f5e1;
+      cursor: pointer;
+    }
+
+    /* Destination Cards */
+    .destination-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* List Styling */
+    ul,
+    ol {
+      padding-left: 40px;
+    }
+
+    ul li,
+    ol li {
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: '\2022';
+      color: #2196F3;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    ol li::marker {
+      color: #2196F3;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Destinations</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Explore Beautiful Destinations</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="section-title">Top Attractions & Their Best Visiting Times</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Attraction</th>
+            <th>Best Time to Visit</th>
+            <th>Famous For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Great Wall of China</td>
+            <td>Spring & Fall</td>
+            <td>Ancient Architecture</td>
+          </tr>
+          <tr>
+            <td>Eiffel Tower</td>
+            <td>Spring</td>
+            <td>Romantic Views</td>
+          </tr>
+          <tr>
+            <td>Grand Canyon</td>
+            <td>Summer & Fall</td>
+            <td>Natural Wonders</td>
+          </tr>
+          <tr>
+            <td>Machu Picchu</td>
+            <td>April to October</td>
+            <td>Ancient Inca Ruins</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2 class="section-title">Famous Destinations</h2>
+      <div class="destination-cards">
+        <div class="card">
+          <a href="https://www.britannica.com/topic/Great-Wall-of-China">
+            <img
+              src="https://www.thechinajourney.com/wp-content/uploads/2024/09/Beautiful-view-of-the-Great-Wall-of-China-at-sunset-showcasing-its-ancient-architecture-against-a-mountainous-landscape-e1725963423163.webp"
+              alt="Great Wall">
+          </a>
+          <div class="card-content">
+            <h3>Great Wall of China</h3>
+            <p>Visit this iconic piece of ancient history, which stretches over 13,000 miles!</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://www.toureiffel.paris/en">
+            <img src="https://img.static-kl.com/images/media/71BBFEDE-473D-4F4E-82522A2197279310" alt="Eiffel Tower">
+          </a>
+          <div class="card-content">
+            <h3>Eiffel Tower</h3>
+            <p>One of the most romantic spots in the world, located in the heart of Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://www.nps.gov/grca/index.htm">
+            <img src="https://www.solitarytraveller.com/wp-content/uploads/2020/09/grand_canyon_india.jpg"
+              alt="Grand Canyon">
+          </a>
+          <div class="card-content">
+            <h3>Grand Canyon</h3>
+            <p>A breathtaking natural wonder with expansive views and a unique geology.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://world.new7wonders.com/wonders/machu-picchu-1460-1470-peru/">
+            <img src="https://tierravivahoteles.com/wp-content/uploads/2020/01/BLOG-2a-1030x699.jpg" alt="Machu Picchu">
+          </a>
+            <div class="card-content">
+              <h3>Machu Picchu</h3>
+              <p>Explore the mysterious Inca city in the Peruvian Andes, hidden for centuries.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Things to Do in These Destinations</h2>
+        <ul>
+            <li>Visit the historical landmarks such as the Great Wall and Eiffel Tower.</li>
+            <li>Try local cuisines like Peking duck in Beijing or croissants in Paris.</li>
+            <li>Go hiking or trekking in natural wonders like the Grand Canyon and Machu Picchu.</li>
+            <li>Take guided city tours to learn about the history and culture of each place.</li>
+        </ul>
+    
+        <!-- Ordered List (Top Attractions) -->
+        <h2 class="section-title">Top 4 Must-See Attractions</h2>
+        <ol>
+            <li>Great Wall of China - A marvel of ancient engineering.</li>
+            <li>Eiffel Tower - A symbol of romance and elegance.</li>
+            <li>Grand Canyon - A massive, stunning natural landmark.</li>
+            <li>Machu Picchu - A hidden gem of the Inca civilization.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2025 Travel Destinations | Designed by Me</p>
+  </footer>
+</body>
+
+</html>
