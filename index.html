@@ -23,7 +23,6 @@
       color: #333;
       line-height: 1.6;
       transition: all 0.3s ease;
-      padding: 0;
     }
 
     /* Navigation Bar */
@@ -34,6 +33,7 @@
     }
 
     nav a {
+      /* Descendant combinator */
       color: white;
       text-decoration: none;
       padding: 10px 15px;
@@ -64,6 +64,7 @@
     }
 
     header h1 {
+      /* Descendant combinator */
       font-size: 48px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
@@ -95,23 +96,29 @@
       padding: 10px;
     }
 
-    th,
-    td {
+    table tbody tr {
+      /* Descendant combinator */
+      border: 1px solid #ddd;
+    }
+
+    table th,
+    table td {
+      /* Descendant combinator */
       padding: 15px;
       text-align: left;
       border: 1px solid #ddd;
     }
 
-    th {
+    table th {
       background-color: #2196F3;
       color: white;
     }
 
-    tr:nth-child(even) {
+    table tbody tr:nth-child(even) {
       background-color: #f9f9f9;
     }
 
-    tr:hover {
+    table tbody tr:hover {
       background-color: #e1f5e1;
       cursor: pointer;
     }
@@ -148,18 +155,29 @@
       text-align: center;
     }
 
+    .card h3 {
+      /* Descendant combinator */
+      color: #2196F3;
+      font-size: 20px;
+    }
+
+    .card p {
+      /* Descendant combinator */
+      font-size: 14px;
+      color: #555;
+    }
+
     /* List Styling */
-    ul,
-    ol {
-      padding-left: 40px;
-    }
-
-    ul li,
-    ol li {
+    section ul li {
+      /* Descendant combinator */
       margin-bottom: 10px;
+      padding-left: 10px;
+      list-style: none;
+      position: relative;
     }
 
-    ul li::before {
+    section ul li::before {
+      /* Descendant combinator */
       content: '\2022';
       color: #2196F3;
       font-weight: bold;
@@ -168,9 +186,14 @@
       margin-left: -1em;
     }
 
-    ol li::marker {
-      color: #2196F3;
+    section ol li {
+      /* Descendant combinator */
       font-weight: bold;
+    }
+
+    section ol li::marker {
+      /* Descendant combinator */
+      color: #2196F3;
     }
 
     /* Footer */
@@ -269,31 +292,30 @@
           <a href="https://world.new7wonders.com/wonders/machu-picchu-1460-1470-peru/">
             <img src="https://tierravivahoteles.com/wp-content/uploads/2020/01/BLOG-2a-1030x699.jpg" alt="Machu Picchu">
           </a>
-            <div class="card-content">
-              <h3>Machu Picchu</h3>
-              <p>Explore the mysterious Inca city in the Peruvian Andes, hidden for centuries.</p>
-            </div>
+          <div class="card-content">
+            <h3>Machu Picchu</h3>
+            <p>Explore the mysterious Inca city in the Peruvian Andes, hidden for centuries.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
+  <h2 class="section-title">Things to Do in These Destinations</h2>
+  <ul>
+    <li>Visit the historical landmarks such as the Great Wall and Eiffel Tower.</li>
+    <li>Try local cuisines like Peking duck in Beijing or croissants in Paris.</li>
+    <li>Go hiking or trekking in natural wonders like the Grand Canyon and Machu Picchu.</li>
+    <li>Take guided city tours to learn about the history and culture of each place.</li>
+  </ul>
 
-         <h2 class="section-title">Things to Do in These Destinations</h2>
-        <ul>
-            <li>Visit the historical landmarks such as the Great Wall and Eiffel Tower.</li>
-            <li>Try local cuisines like Peking duck in Beijing or croissants in Paris.</li>
-            <li>Go hiking or trekking in natural wonders like the Grand Canyon and Machu Picchu.</li>
-            <li>Take guided city tours to learn about the history and culture of each place.</li>
-        </ul>
-    
-        <!-- Ordered List (Top Attractions) -->
-        <h2 class="section-title">Top 4 Must-See Attractions</h2>
-        <ol>
-            <li>Great Wall of China - A marvel of ancient engineering.</li>
-            <li>Eiffel Tower - A symbol of romance and elegance.</li>
-            <li>Grand Canyon - A massive, stunning natural landmark.</li>
-            <li>Machu Picchu - A hidden gem of the Inca civilization.</li>
-        </ol> 
+  <!-- Ordered List (Top Attractions) -->
+  <h2 class="section-title">Top 4 Must-See Attractions</h2>
+  <ol>
+    <li>Great Wall of China - A marvel of ancient engineering.</li>
+    <li>Eiffel Tower - A symbol of romance and elegance.</li>
+    <li>Grand Canyon - A massive, stunning natural landmark.</li>
+    <li>Machu Picchu - A hidden gem of the Inca civilization.</li>
+  </ol>
   <footer>
     <p>Copyright &copy; 2025 Travel Destinations | Designed by Me</p>
   </footer>
